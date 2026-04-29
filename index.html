@@ -1,0 +1,3756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Quay Insider | InterContinental Singapore Robertson Quay</title>
+  <!--
+    Verified on 24 Apr 2026 using:
+    - InterContinental Singapore Robertson Quay fact sheet PDF shared by user
+    - IHG hotel detail, dining and directions pages
+    - New Bahru official directory
+    - Natureland official locations page
+    - Common Man Coffee Roasters official locations page
+    - Meta official / Michelin Guide listing
+    - Bistecca official site
+    - STPI official visit page
+    - Zouk Group official site
+    - PPP Coffee official stores page
+    - Singapore Repertory Theatre official contact page
+
+    Notes:
+    - Walking times are approximate from InterContinental Singapore Robertson Quay.
+    - Some outlets and hours can change; Google Maps links are generated for quick checking.
+  -->
+  <style>
+    :root {
+      --ink: #0f1824;
+      --ink-soft: #1b2635;
+      --ink-muted: #4f5f74;
+      --gold: #c9a96a;
+      --gold-soft: #f1dfb8;
+      --champagne: #f7f1e4;
+      --paper: #fbfaf7;
+      --paper-2: #f2ede3;
+      --line: rgba(13, 26, 42, 0.1);
+      --line-strong: rgba(201, 169, 106, 0.3);
+      --teal: #71c7c4;
+      --teal-soft: rgba(113, 199, 196, 0.14);
+      --wine: #7a4b5f;
+      --shadow: 0 24px 80px rgba(4, 15, 28, 0.16);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --max: 1280px;
+      --top-offset: 88px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(113, 199, 196, 0.2), transparent 34%),
+        radial-gradient(circle at top left, rgba(201, 169, 106, 0.12), transparent 26%),
+        linear-gradient(180deg, #0f1824 0%, #131e2c 30%, #f6f2ea 30%, #f6f2ea 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    section[id] {
+      scroll-margin-top: calc(var(--top-offset) + 18px);
+    }
+
+    .shell {
+      width: min(calc(100% - 28px), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(20px);
+      background: linear-gradient(180deg, rgba(10, 18, 29, 0.84), rgba(10, 18, 29, 0.72));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .topbar-inner {
+      width: min(calc(100% - 28px), var(--max));
+      margin: 0 auto;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      flex: 0 1 auto;
+    }
+
+    .brand-logo-shell {
+      width: 28px;
+      height: 38px;
+      overflow: visible;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      flex: 0 0 auto;
+    }
+
+    .brand-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      background: transparent;
+    }
+
+    .brand-label {
+      color: rgba(244, 239, 227, 0.9);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: none;
+      font-weight: 700;
+      white-space: nowrap;
+      line-height: 1.15;
+      max-width: none;
+    }
+
+    @media (max-width: 720px) {
+      .brand-label {
+        font-size: 0.74rem;
+        letter-spacing: 0.04em;
+        max-width: 160px;
+      }
+    }
+
+    .nav {
+      display: flex;
+      gap: 8px;
+      flex: 1 1 auto;
+      min-width: 0;
+      justify-content: flex-end;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-block: 4px;
+    }
+
+    .nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav a {
+      flex: 0 0 auto;
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(244, 239, 227, 0.76);
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff8eb;
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    @media (max-width: 1120px) {
+      :root {
+        --top-offset: 136px;
+      }
+
+      .topbar-inner {
+        min-height: auto;
+        padding: 10px 0 12px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+      }
+
+      .brand {
+        flex: 1 1 100%;
+      }
+
+      .brand-label {
+        max-width: none;
+        white-space: normal;
+        line-height: 1.2;
+      }
+
+      .nav {
+        flex: 1 1 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px 6px;
+        overflow-x: visible;
+        padding-top: 0;
+      }
+    }
+
+    @media (max-width: 720px) {
+      :root {
+        --top-offset: 154px;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .brand-logo-shell {
+        width: 24px;
+        height: 32px;
+      }
+
+      .brand-label {
+        font-size: 0.76rem;
+        letter-spacing: 0.02em;
+        max-width: none;
+        white-space: normal;
+      }
+
+      .nav {
+        gap: 6px;
+      }
+
+      .nav a {
+        padding: 8px 10px;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+      }
+    }
+
+    @media (max-width: 520px) {
+      :root {
+        --top-offset: 182px;
+      }
+
+      .shell,
+      .topbar-inner {
+        width: min(calc(100% - 18px), var(--max));
+      }
+
+      .nav a {
+        padding: 7px 9px;
+        font-size: 0.68rem;
+      }
+
+      .hero {
+        padding: 24px 0 40px;
+      }
+
+      .hero-copy,
+      .hero-rail {
+        width: 100%;
+        padding: 20px 14px;
+        border-radius: 22px;
+      }
+
+      .eyebrow {
+        gap: 8px;
+        font-size: 0.66rem;
+        margin-bottom: 12px;
+      }
+
+      .eyebrow::before {
+        width: 24px;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.95rem, 10.5vw, 3.35rem);
+        max-width: 7ch;
+      }
+
+      .hero-intro {
+        max-width: none;
+        font-size: 0.93rem;
+        line-height: 1.58;
+      }
+
+      .hero-proof {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-proof article {
+        padding: 12px;
+      }
+
+      .hero-proof strong {
+        font-size: 1.1rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button,
+      .ghost-button {
+        width: 100%;
+        min-height: 46px;
+        padding: 10px 16px;
+      }
+    }
+
+    .hero {
+      padding: 36px 0 56px;
+      color: #f4efe3;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .hero-grid > *,
+    .summary-grid > *,
+    .quick-grid > *,
+    .highlight-grid > *,
+    .card-grid > *,
+    .closing-grid > *,
+    .contact-grid > *,
+    .itinerary-shell > * {
+      min-width: 0;
+    }
+
+    .hero-copy,
+    .hero-rail,
+    .summary-card,
+    .crew-panel,
+    .highlight-card,
+    .itinerary-panel,
+    .flipbook-panel,
+    .closing-panel {
+      position: relative;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .hero-copy,
+    .hero-rail {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03)),
+        rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+      border-radius: var(--radius-xl);
+    }
+
+    .hero-copy {
+      padding: 28px 22px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      color: var(--gold-soft);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 38px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.55rem, 7vw, 5.6rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      max-width: 11ch;
+    }
+
+    .hero h1 span {
+      color: var(--gold-soft);
+    }
+
+    .hero-intro {
+      margin: 18px 0 0;
+      max-width: 62ch;
+      font-size: clamp(1rem, 2vw, 1.14rem);
+      line-height: 1.75;
+      color: rgba(244, 239, 227, 0.82);
+    }
+
+    .hero-proof {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .hero-proof article {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-proof span {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(244, 239, 227, 0.62);
+      margin-bottom: 8px;
+    }
+
+    .hero-proof strong {
+      font-size: 1.2rem;
+      color: #fff8ec;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .button,
+    .ghost-button,
+    .chip-button,
+    .filter-pill,
+    .mini-link {
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .button,
+    .ghost-button {
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .button {
+      background: linear-gradient(135deg, #f4ddad, #c9a96a);
+      color: #1a2534;
+      box-shadow: 0 16px 38px rgba(201, 169, 106, 0.24);
+    }
+
+    .ghost-button {
+      color: #f4efe3;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .button:hover,
+    .button:focus-visible,
+    .ghost-button:hover,
+    .ghost-button:focus-visible,
+    .chip-button:hover,
+    .chip-button:focus-visible,
+    .filter-pill:hover,
+    .filter-pill:focus-visible,
+    .mini-link:hover,
+    .mini-link:focus-visible {
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .hero-rail {
+      padding: 22px;
+      min-height: 480px;
+    }
+
+    .hero-rail::before,
+    .hero-copy::before {
+      content: "";
+      position: absolute;
+      inset: auto -10% -35% auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(113, 199, 196, 0.18), transparent 72%);
+      pointer-events: none;
+    }
+
+    .rail-head {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .rail-head h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      line-height: 1.1;
+      color: #fff8ec;
+    }
+
+    .rail-head p {
+      margin: 10px 0 0;
+      color: rgba(244, 239, 227, 0.7);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .rail-badge {
+      flex: 0 0 auto;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(201, 169, 106, 0.34);
+      color: var(--gold-soft);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: rgba(201, 169, 106, 0.08);
+      white-space: nowrap;
+    }
+
+    .route-rail {
+      position: relative;
+      padding-left: 36px;
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .route-rail::before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 12px;
+      bottom: 12px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--gold), rgba(113, 199, 196, 0.6), rgba(113, 199, 196, 0.2));
+    }
+
+    .route-stop {
+      position: relative;
+      padding: 16px 16px 16px 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .route-stop::before {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 20px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #fff;
+      border: 4px solid var(--gold);
+      box-shadow: 0 0 0 6px rgba(201, 169, 106, 0.12);
+    }
+
+    .route-stop strong {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      font-size: 1rem;
+      color: #fff9ee;
+    }
+
+    .route-stop span {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: rgba(244, 239, 227, 0.7);
+    }
+
+    .route-stop em {
+      font-style: normal;
+      color: var(--gold-soft);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.68rem;
+      white-space: nowrap;
+    }
+
+    .summary {
+      padding: 8px 0 58px;
+      color: #f4efe3;
+    }
+
+    .summary-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .summary-card,
+    .crew-panel,
+    .highlight-card {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03)),
+        rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 18px 54px rgba(0, 0, 0, 0.18);
+    }
+
+    .summary-card {
+      padding: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .summary-card small,
+    .crew-panel small,
+    .highlight-card small,
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.74rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .summary-card small::before,
+    .crew-panel small::before,
+    .highlight-card small::before,
+    .section-kicker::before {
+      content: "";
+      width: 26px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .summary-card h3,
+    .crew-panel h3,
+    .highlight-card h3,
+    .section-head h2,
+    .flipbook-copy h2,
+    .closing-panel h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.04;
+      letter-spacing: -0.02em;
+    }
+
+    .summary-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #fff8ed;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: rgba(244, 239, 227, 0.76);
+      line-height: 1.7;
+      font-size: 0.96rem;
+      flex: 1 0 auto;
+    }
+
+    .crew-panel {
+      padding: 22px;
+      height: 100%;
+    }
+
+    .crew-panel h3 {
+      font-size: 1.6rem;
+      color: #fff8ed;
+      margin-bottom: 10px;
+    }
+
+    .crew-panel p {
+      margin: 0 0 16px;
+      color: rgba(244, 239, 227, 0.76);
+      line-height: 1.7;
+    }
+
+    .quick-grid,
+    .highlight-grid,
+    .closing-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .chip-button {
+      width: 100%;
+      text-align: left;
+      padding: 18px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      color: #f7f2e9;
+    }
+
+    .chip-button strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .chip-button span {
+      display: block;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: rgba(244, 239, 227, 0.68);
+    }
+
+    .chip-button.active {
+      background: rgba(201, 169, 106, 0.12);
+      border-color: rgba(201, 169, 106, 0.34);
+      box-shadow: 0 14px 36px rgba(201, 169, 106, 0.14);
+    }
+
+    .highlight-card {
+      padding: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .highlight-card h3 {
+      font-size: 1.42rem;
+      line-height: 1.08;
+      margin-bottom: 12px;
+      min-height: 2.4em;
+      color: #fff8ed;
+      text-wrap: balance;
+    }
+
+    .highlight-card p {
+      margin: 0 0 16px;
+      color: rgba(244, 239, 227, 0.74);
+      line-height: 1.65;
+      flex: 1 0 auto;
+    }
+
+    .pick-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .mini-link {
+      min-height: 48px;
+      width: 100%;
+      padding: 8px 14px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      color: #fff7ea;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.2;
+      white-space: normal;
+      text-wrap: balance;
+      overflow-wrap: anywhere;
+    }
+
+    .mini-link:hover,
+    .mini-link:focus-visible {
+      border-color: rgba(201, 169, 106, 0.34);
+      background: rgba(201, 169, 106, 0.1);
+    }
+
+    .directory-zone {
+      background: linear-gradient(180deg, #fbfaf7 0%, #f6f2ea 100%);
+      border-top-left-radius: 34px;
+      border-top-right-radius: 34px;
+      box-shadow: 0 -24px 70px rgba(9, 18, 31, 0.08);
+      color: var(--ink);
+      padding: 34px 0 70px;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      color: #142234;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: #415063;
+      max-width: 68ch;
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+
+    .verified-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      min-height: 42px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: rgba(201, 169, 106, 0.08);
+      color: #70531d;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    .directory-zone .section-kicker {
+      color: #8b6828;
+    }
+
+    .controls-wrap {
+      position: static;
+      margin-bottom: 18px;
+    }
+
+    .controls {
+      background: #fff;
+      border: 1px solid rgba(13, 26, 42, 0.08);
+      box-shadow: 0 16px 38px rgba(15, 24, 36, 0.08);
+      border-radius: 24px;
+      padding: 14px;
+    }
+
+    .search-row {
+      display: grid;
+      gap: 12px;
+    }
+
+    .search {
+      width: 100%;
+      min-height: 52px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 0 16px;
+      font-size: 0.98rem;
+      color: var(--ink);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .search:focus {
+      outline: none;
+      border-color: rgba(113, 199, 196, 0.7);
+      box-shadow: 0 0 0 4px rgba(113, 199, 196, 0.14);
+    }
+
+    .filter-block {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .filter-label {
+      font-size: 0.74rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      font-weight: 700;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-pill {
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink-soft);
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+
+    .filter-pill.active {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+      box-shadow: 0 10px 22px rgba(15, 24, 36, 0.12);
+    }
+
+    .clear-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    .result-meta {
+      color: var(--ink-muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .ghost-clear {
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--ink-soft);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .ghost-clear:hover,
+    .ghost-clear:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(201, 169, 106, 0.42);
+      background: rgba(201, 169, 106, 0.08);
+      outline: none;
+    }
+
+    .directory-groups {
+      display: grid;
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .group {
+      scroll-margin-top: calc(var(--top-offset) + 24px);
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 20px 56px rgba(15, 24, 36, 0.06);
+    }
+
+    .group-head {
+      padding: 22px 20px 16px;
+      border-bottom: 1px solid rgba(13, 26, 42, 0.06);
+      background:
+        linear-gradient(180deg, rgba(201, 169, 106, 0.08), transparent),
+        #fff;
+    }
+
+    .group-head strong {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 1.52rem;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .group-head span {
+      color: var(--ink-muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .card-grid {
+      display: grid;
+      gap: 12px;
+      padding: 16px;
+    }
+
+    .venue-card {
+      position: relative;
+      padding: 16px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #fff, #faf7f1);
+      border: 1px solid rgba(13, 26, 42, 0.08);
+      box-shadow: 0 12px 30px rgba(15, 24, 36, 0.05);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      scroll-margin-top: calc(var(--top-offset) + 24px);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .venue-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(15, 24, 36, 0.08);
+      border-color: rgba(201, 169, 106, 0.28);
+    }
+
+    .venue-card.flash {
+      animation: flashCard 1.2s ease;
+    }
+
+    @keyframes flashCard {
+      0% { box-shadow: 0 0 0 0 rgba(113, 199, 196, 0.34); }
+      100% { box-shadow: 0 18px 40px rgba(15, 24, 36, 0.08); }
+    }
+
+    .card-top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .card-top h3 {
+      margin: 0;
+      font-size: 1.14rem;
+      line-height: 1.28;
+      min-height: 2.56em;
+      text-wrap: balance;
+    }
+
+    .tag-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: end;
+      flex: 0 0 auto;
+    }
+
+    .badge {
+      min-height: 28px;
+      padding: 0 10px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.72rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .badge.distance {
+      background: rgba(201, 169, 106, 0.12);
+      color: #7c5e22;
+      border: 1px solid rgba(201, 169, 106, 0.18);
+      cursor: pointer;
+    }
+
+    .badge.category {
+      background: rgba(113, 199, 196, 0.12);
+      color: #125353;
+      border: 1px solid rgba(113, 199, 196, 0.18);
+      cursor: pointer;
+    }
+
+    .address {
+      color: var(--ink-muted);
+      line-height: 1.65;
+      margin: 0 0 10px;
+      font-size: 0.94rem;
+      min-height: 3.3em;
+    }
+
+    .note {
+      margin: 0 0 14px;
+      color: var(--ink-soft);
+      line-height: 1.72;
+      font-size: 0.95rem;
+      flex: 1 0 auto;
+    }
+
+    .note-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+      min-height: 28px;
+    }
+
+    .note-tags span {
+      min-height: 28px;
+      padding: 0 10px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      background: rgba(15, 24, 36, 0.05);
+      color: var(--ink-muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .card-link {
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--ink);
+      color: #fff;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card-link.secondary {
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--ink-soft);
+    }
+
+    .card-link:hover,
+    .card-link:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 20px rgba(15, 24, 36, 0.08);
+      outline: none;
+    }
+
+    .empty-state {
+      padding: 28px 18px;
+      border-radius: 20px;
+      border: 1px dashed rgba(13, 26, 42, 0.14);
+      background: rgba(255, 255, 255, 0.58);
+      color: var(--ink-muted);
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .itineraries {
+      padding: 64px 0 24px;
+      color: var(--ink);
+    }
+
+    .itinerary-shell {
+      display: grid;
+      gap: 18px;
+    }
+
+    .itinerary-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .itinerary-tab {
+      min-height: 42px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.66);
+      color: var(--ink-soft);
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .itinerary-tab.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #fff;
+    }
+
+    .itinerary-panel {
+      border-radius: 26px;
+      background:
+        linear-gradient(180deg, rgba(201, 169, 106, 0.08), transparent),
+        rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 54px rgba(15, 24, 36, 0.08);
+      padding: 20px;
+    }
+
+    .itinerary-top {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .itinerary-top h3 {
+      font-size: 1.8rem;
+      margin-bottom: 2px;
+    }
+
+    .itinerary-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .itinerary-meta span {
+      min-height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      background: rgba(15, 24, 36, 0.06);
+      color: var(--ink-soft);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .itinerary-body {
+      display: grid;
+      gap: 12px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(13, 26, 42, 0.08);
+    }
+
+    .step-index {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+      color: #3b2a10;
+      font-weight: 800;
+      font-size: 0.86rem;
+      box-shadow: 0 10px 18px rgba(201, 169, 106, 0.18);
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--ink-muted);
+      line-height: 1.68;
+      font-size: 0.94rem;
+    }
+
+    .jump {
+      margin-top: 10px;
+      padding: 0;
+      border: none;
+      background: transparent;
+      color: #87652a;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .jump:hover,
+    .jump:focus-visible {
+      color: var(--ink);
+      outline: none;
+    }
+
+    .flipbook {
+      padding: 24px 0 24px;
+    }
+
+    .flipbook-panel {
+      border-radius: 28px;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+        rgba(15, 24, 36, 0.96);
+      color: #f4efe3;
+      box-shadow: 0 26px 76px rgba(5, 14, 24, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .flipbook-grid {
+      display: grid;
+    }
+
+    .flipbook-copy {
+      padding: 24px;
+    }
+
+    .flipbook-copy h2 {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      margin-bottom: 12px;
+    }
+
+    .flipbook-copy p {
+      margin: 0 0 18px;
+      line-height: 1.8;
+      color: rgba(244, 239, 227, 0.76);
+    }
+
+    .flipbook-frame {
+      position: relative;
+      min-height: 420px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .flipbook-frame iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      border: 0;
+      background: #fff;
+    }
+
+    .closing {
+      padding: 24px 0 70px;
+    }
+
+    .closing-panel {
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(201, 169, 106, 0.16), transparent 40%),
+        linear-gradient(180deg, #111a27, #182335);
+      color: #f5efe2;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 32px 90px rgba(5, 14, 24, 0.28);
+      padding: 26px;
+    }
+
+    .closing-panel h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 12px;
+    }
+
+    .closing-panel > p {
+      margin: 0 0 20px;
+      max-width: 70ch;
+      color: rgba(245, 239, 226, 0.8);
+      line-height: 1.82;
+      font-size: 1.02rem;
+    }
+
+    .closing-grid {
+      margin-top: 18px;
+    }
+
+    .closing-grid article {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .closing-grid strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      color: #fff9ee;
+    }
+
+    .closing-grid p {
+      margin: 0;
+      color: rgba(245, 239, 226, 0.72);
+      line-height: 1.72;
+      font-size: 0.94rem;
+      flex: 1 0 auto;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      font-size: 0.86rem;
+      color: rgba(245, 239, 226, 0.64);
+      line-height: 1.7;
+    }
+
+    .pdf-guide {
+      display: none;
+    }
+
+    .page-stabilizer {
+      height: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .pdf-shell {
+      max-width: 980px;
+      margin: 0 auto;
+      color: #122033;
+    }
+
+    .pdf-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .pdf-brand img {
+      width: 34px;
+      height: 46px;
+      object-fit: contain;
+    }
+
+    .pdf-brand strong {
+      display: block;
+      font-size: 1.18rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .pdf-brand span {
+      display: block;
+      margin-top: 4px;
+      color: #5a6778;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .pdf-head h1 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.45rem;
+      line-height: 1.04;
+    }
+
+    .pdf-head p {
+      margin: 0;
+      max-width: 72ch;
+      color: #4a596b;
+      line-height: 1.7;
+      font-size: 0.98rem;
+    }
+
+    .pdf-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 24px 0 30px;
+    }
+
+    .pdf-meta article {
+      border: 1px solid rgba(13, 26, 42, 0.1);
+      border-radius: 16px;
+      padding: 14px 16px;
+      background: #fff;
+    }
+
+    .pdf-meta span {
+      display: block;
+      margin-bottom: 6px;
+      color: #7d5b21;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .pdf-meta strong {
+      font-size: 1rem;
+      color: #122033;
+    }
+
+    .pdf-bands {
+      display: grid;
+      gap: 18px;
+    }
+
+    .pdf-band {
+      border: 1px solid rgba(13, 26, 42, 0.1);
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .pdf-band-head {
+      padding: 14px 18px;
+      background: linear-gradient(180deg, rgba(201, 169, 106, 0.12), rgba(201, 169, 106, 0.04));
+      border-bottom: 1px solid rgba(13, 26, 42, 0.08);
+    }
+
+    .pdf-band-head strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.32rem;
+      margin-bottom: 4px;
+    }
+
+    .pdf-band-head span {
+      color: #4a596b;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .pdf-band-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      padding: 14px;
+    }
+
+    .pdf-venue {
+      border: 1px solid rgba(13, 26, 42, 0.08);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: #fff;
+    }
+
+    .pdf-venue-top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .pdf-venue h3 {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .pdf-venue .pdf-type {
+      flex: 0 0 auto;
+      min-height: 24px;
+      padding: 0 9px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      background: rgba(113, 199, 196, 0.12);
+      color: #0e5552;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .pdf-address,
+    .pdf-note {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.58;
+    }
+
+    .pdf-address {
+      color: #556578;
+      margin-bottom: 8px;
+    }
+
+    .pdf-note {
+      color: #1d2b3c;
+    }
+
+    .pdf-footer {
+      margin-top: 26px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(13, 26, 42, 0.1);
+      color: #566476;
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
+    .reveal {
+      opacity: 1;
+      transform: translateY(18px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .contact-grid {
+      align-items: stretch;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      margin-top: auto;
+    }
+
+    .contact-links a {
+      min-height: 38px;
+      padding: 0 12px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff8ed;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .contact-links a:hover,
+    .contact-links a:focus-visible {
+      transform: translateY(-1px);
+      background: rgba(201, 169, 106, 0.16);
+      border-color: rgba(201, 169, 106, 0.36);
+      outline: none;
+    }
+
+    @media (min-width: 760px) {
+      .hero-proof {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .quick-grid,
+      .highlight-grid,
+      .closing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .flipbook-grid {
+        grid-template-columns: minmax(300px, 0.42fr) minmax(0, 1fr);
+      }
+
+      .flipbook-frame {
+        border-top: 0;
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    @media (min-width: 980px) {
+      .hero {
+        padding-top: 44px;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.72fr);
+        align-items: stretch;
+      }
+
+      .hero-copy {
+        padding: 34px 34px 30px;
+      }
+
+      .hero-rail {
+        padding: 28px;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1.05fr 0.95fr;
+      }
+
+      .highlight-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 1fr;
+      }
+
+      .quick-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .itinerary-shell {
+        grid-template-columns: 280px minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .itinerary-tabs {
+        position: static;
+        flex-direction: column;
+      }
+
+      .itinerary-tab {
+        justify-content: flex-start;
+        min-height: 50px;
+        text-align: left;
+      }
+
+      .closing-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .shell {
+        width: min(calc(100% - 22px), var(--max));
+      }
+
+      .hero {
+        padding: 28px 0 42px;
+      }
+
+      .hero-grid,
+      .flipbook-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.25rem, 7.2vw, 4.2rem);
+        max-width: 8.8ch;
+      }
+
+      .hero-copy,
+      .hero-rail,
+      .summary-card,
+      .crew-panel,
+      .highlight-card,
+      .group,
+      .itinerary-panel,
+      .flipbook-panel,
+      .closing-panel {
+        border-radius: 22px;
+      }
+
+      .hero-proof {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .flipbook-frame {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .flipbook-frame,
+      .flipbook-frame iframe {
+        min-height: 360px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      :root {
+        --top-offset: 184px;
+      }
+
+      .shell {
+        width: min(calc(100% - 18px), var(--max));
+      }
+
+      .topbar-inner {
+        padding: 10px 0 10px;
+        gap: 8px 12px;
+      }
+
+      .brand {
+        flex: 1 1 100%;
+        align-items: center;
+      }
+
+      .brand-label {
+        max-width: calc(100vw - 78px);
+        font-size: 0.76rem;
+        line-height: 1.2;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        overflow-x: visible;
+        justify-content: flex-start;
+        gap: 6px 6px;
+        padding: 2px 0 0;
+      }
+
+      .nav a {
+        padding: 8px 9px;
+        font-size: 0.69rem;
+        letter-spacing: 0.04em;
+      }
+
+      .hero-grid {
+        gap: 18px;
+      }
+
+      .hero-copy,
+      .hero-rail,
+      .summary-card,
+      .crew-panel,
+      .highlight-card,
+      .itinerary-panel,
+      .flipbook-copy,
+      .closing-panel {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.95rem, 9.2vw, 2.95rem);
+        max-width: 8.3ch;
+        line-height: 0.92;
+      }
+
+      .hero-intro,
+      .section-head p,
+      .summary-card p,
+      .crew-panel p,
+      .highlight-card p,
+      .closing-panel > p {
+        font-size: 0.96rem;
+        line-height: 1.68;
+      }
+
+      .hero-actions {
+        gap: 10px;
+      }
+
+      .hero-proof {
+        grid-template-columns: 1fr;
+      }
+
+      .button,
+      .ghost-button {
+        width: 100%;
+      }
+
+      .rail-head {
+        gap: 12px;
+      }
+
+      .rail-head h2 {
+        font-size: 1.4rem;
+      }
+
+      .route-rail {
+        padding-left: 30px;
+        gap: 10px;
+      }
+
+      .route-stop {
+        padding: 14px 14px 14px 16px;
+      }
+
+      .route-stop strong {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .summary {
+        padding-bottom: 42px;
+      }
+
+      .directory-zone {
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        padding-top: 26px;
+      }
+
+      .section-head {
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .section-head h2,
+      .flipbook-copy h2,
+      .closing-panel h2 {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+      }
+
+      .verified-note {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .controls {
+        border-radius: 20px;
+        padding: 12px;
+      }
+
+      .search {
+        min-height: 48px;
+        padding: 0 14px;
+        font-size: 0.95rem;
+      }
+
+      .pill-row {
+        flex-wrap: wrap;
+        overflow-x: visible;
+        padding: 2px 0 0;
+        margin-inline: 0;
+      }
+
+      .filter-pill {
+        flex: 0 0 auto;
+        font-size: 0.82rem;
+      }
+
+      .clear-row {
+        align-items: flex-start;
+      }
+
+      .ghost-clear {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .group-head {
+        padding: 16px 16px 12px;
+      }
+
+      .group-head strong {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        font-size: 1.28rem;
+      }
+
+      .group-head span {
+        margin-top: 8px;
+        font-size: 0.94rem;
+        line-height: 1.55;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+        padding: 12px;
+      }
+
+      .venue-card {
+        padding: 14px;
+        border-radius: 16px;
+      }
+
+      .card-top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .card-top h3 {
+        min-height: 0;
+        font-size: 1.06rem;
+      }
+
+      .tag-stack {
+        justify-content: flex-start;
+      }
+
+      .address {
+        min-height: 0;
+        font-size: 0.92rem;
+      }
+
+      .note {
+        font-size: 0.94rem;
+        line-height: 1.65;
+      }
+
+      .note-tags {
+        min-height: 0;
+        margin-bottom: 12px;
+      }
+
+      .card-actions,
+      .contact-links {
+        flex-direction: column;
+      }
+
+      .card-link,
+      .card-link.secondary,
+      .contact-links a {
+        width: 100%;
+      }
+
+      .quick-grid,
+      .highlight-grid,
+      .closing-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .itineraries {
+        padding-top: 48px;
+      }
+
+      .itinerary-tab {
+        width: 100%;
+      }
+
+      .itinerary-top h3 {
+        font-size: 1.5rem;
+      }
+
+      .step {
+        grid-template-columns: 30px 1fr;
+        padding: 12px;
+      }
+
+      .flipbook-frame,
+      .flipbook-frame iframe {
+        min-height: 320px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      :root {
+        --top-offset: 198px;
+      }
+
+      .brand-logo-shell {
+        width: 20px;
+        height: 28px;
+      }
+
+      .brand-label {
+        max-width: calc(100vw - 64px);
+        font-size: 0.71rem;
+      }
+
+      .hero {
+        padding: 18px 0 32px;
+      }
+
+      .hero-copy,
+      .hero-rail,
+      .summary-card,
+      .crew-panel,
+      .highlight-card,
+      .itinerary-panel,
+      .flipbook-copy,
+      .closing-panel {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.72rem, 8.8vw, 2.42rem);
+        max-width: 7.6ch;
+      }
+
+      .hero-intro {
+        font-size: 0.92rem;
+      }
+
+      .hero-proof article {
+        padding: 11px;
+      }
+
+      .eyebrow,
+      .summary-card small,
+      .crew-panel small,
+      .highlight-card small,
+      .section-kicker {
+        letter-spacing: 0.12em;
+      }
+
+      .section-head h2,
+      .flipbook-copy h2,
+      .closing-panel h2 {
+        font-size: clamp(1.85rem, 11vw, 2.45rem);
+      }
+
+      .group-head strong {
+        font-size: 1.18rem;
+      }
+
+      .filter-pill,
+      .itinerary-tab,
+      .card-link,
+      .card-link.secondary,
+      .contact-links a {
+        font-size: 0.78rem;
+      }
+
+      .button,
+      .ghost-button {
+        min-height: 44px;
+        font-size: 0.76rem;
+      }
+
+      .card-top h3 {
+        font-size: 1rem;
+      }
+
+      .note {
+        font-size: 0.92rem;
+      }
+
+      .flipbook-frame,
+      .flipbook-frame iframe {
+        min-height: 260px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .pdf-meta,
+      .pdf-band-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 12mm;
+      }
+
+      html,
+      body {
+        background: #fff !important;
+        color: #122033 !important;
+      }
+
+      .topbar,
+      .hero,
+      .summary,
+      #directory,
+      #itineraries,
+      #flipbook,
+      #contact {
+        display: none !important;
+      }
+
+      .directory-zone {
+        background: #fff !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+      }
+
+      .shell {
+        width: 100% !important;
+        max-width: none !important;
+      }
+
+      .pdf-guide {
+        display: block !important;
+        padding: 0 !important;
+      }
+
+      .pdf-band,
+      .pdf-venue,
+      .pdf-meta article {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none !important;
+      }
+
+      .pdf-band-grid {
+        gap: 10px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+  <script>
+    window.__hotelEmblem = "data:image/png;base64,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";
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-logo-shell">
+          <img class="brand-logo" src="assets/hotel-emblem.png" alt="InterContinental Singapore Robertson Quay" onerror="this.onerror=null;this.src=window.__hotelEmblem;" />
+        </span>
+        <span class="brand-label">InterContinental Singapore Robertson Quay</span>
+      </a>
+      <nav class="nav" aria-label="Section navigation">
+        <a href="#overview">Overview</a>
+        <a href="#directory">Directory</a>
+        <a href="#itineraries">Suggested Plans</a>
+        <a href="#flipbook">The Quay Insider</a>
+        <a href="#contact">Contact Details</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="shell hero-grid">
+        <article class="hero-copy reveal">
+          <p class="eyebrow">Neighbourhood Guide</p>
+          <h1>Everything worth stepping out for, <span>within walking distance.</span></h1>
+          <p class="hero-intro">
+            Whether someone is here for work, between flights, or simply making the most of a stay, Robertson Quay makes life easy. Good food, coffee, late-night options, wellness, essentials and city access are all close by, without needing much planning.
+          </p>
+
+          <div class="hero-proof">
+            <article>
+              <span>Walkable Radius</span>
+              <strong>In-hotel to 15 min</strong>
+            </article>
+            <article>
+              <span>Nearby MRT</span>
+              <strong id="heroMrtCount">4 stations</strong>
+            </article>
+            <article>
+              <span>Useful Stops</span>
+              <strong id="heroVenueCount">40+ picks</strong>
+            </article>
+            <article>
+              <span>Best Fit</span>
+              <strong>Premium + practical</strong>
+            </article>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button" href="#directory">Explore the guide</a>
+            <a class="ghost-button" href="#flipbook">Open The Quay Insider</a>
+          </div>
+        </article>
+
+        <aside class="hero-rail reveal" aria-label="Walking radius summary">
+          <div class="rail-head">
+            <div>
+              <p class="eyebrow">Walkable Structure</p>
+              <h2>One hotel. Four easy walking bands.</h2>
+              <p>It is simple to use on stay: eat well, pick up essentials, find a good coffee, head out for the evening, or slow things down without travelling far.</p>
+            </div>
+          </div>
+
+          <div class="route-rail">
+            <div class="route-stop">
+              <strong>In-Hotel <em id="count-in-hotel">0 venues</em></strong>
+              <span>On-site restaurants, lounge access, and immediate recovery options the moment guests arrive.</span>
+            </div>
+            <div class="route-stop">
+              <strong>5-Min Walk <em id="count-5">0 venues</em></strong>
+              <span>The strongest quick-use band: riverfront dining, coffee, massage, convenience, and easy reset points.</span>
+            </div>
+            <div class="route-stop">
+              <strong>10-Min Walk <em id="count-10">0 venues</em></strong>
+              <span>Broader choice for lifestyle, nightlife, transport, shopping, and the newer Robertson Quay energy hubs.</span>
+            </div>
+            <div class="route-stop">
+              <strong>15-Min Walk <em id="count-15">0 venues</em></strong>
+              <span>A longer but still manageable walk for Clarke Quay, bigger malls, extra transport links, and broader exploring.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="summary" id="overview">
+      <div class="shell">
+        <div class="summary-grid">
+          <div class="summary-card reveal">
+            <small>At A Glance</small>
+            <h3>Why this guide is useful</h3>
+            <p>
+              This puts the neighbourhood into one place, so guests can quickly see what is nearby and what is genuinely worth their time. The area is strong on dining, coffee, wellness, essentials, nightlife and easy city access.
+            </p>
+          </div>
+
+          <div class="summary-card reveal">
+            <small>Around The Hotel</small>
+            <h3>Good options without going far</h3>
+            <p>
+              Step outside and there is already something to do, whether that means a proper dinner, a quick coffee, a massage, a grocery run, or a walk by the river. It feels polished without being hard work.
+            </p>
+          </div>
+
+          <div class="crew-panel reveal">
+            <small>Quick Picks</small>
+            <h3>Need something fast?</h3>
+            <p>Start here if you want the short version. These picks are grouped by what most guests usually need first.</p>
+            <div class="quick-grid" id="quickGrid"></div>
+          </div>
+
+          <div class="highlight-grid reveal" id="highlightGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="directory-zone">
+      <div class="shell">
+        <section id="directory">
+          <div class="section-head">
+            <small class="section-kicker">Interactive Directory</small>
+            <h2>The walkable guide</h2>
+            <p>
+              Search by venue, cuisine, address, or use the distance and category filters to find what matters in the moment. It is designed to work both as a presentation tool and as something guests can actually use during their stay.
+            </p>
+          </div>
+
+          <div class="controls-wrap">
+            <div class="controls">
+              <div class="search-row">
+                <input id="searchInput" class="search" type="search" placeholder="Search venue, cuisine, address, district, or note..." aria-label="Search the directory" />
+              </div>
+
+              <div class="filter-block">
+                <div class="filter-label">Distance</div>
+                <div class="pill-row" id="distanceFilters"></div>
+              </div>
+
+              <div class="filter-block">
+                <div class="filter-label">Category</div>
+                <div class="pill-row" id="categoryFilters"></div>
+              </div>
+
+              <div class="clear-row">
+                <div class="result-meta" id="resultMeta">Loading directory...</div>
+                <button class="ghost-clear" id="clearFilters" type="button">Clear all</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="directoryGroups" class="directory-groups" aria-live="polite"></div>
+        </section>
+
+        <section id="itineraries" class="itineraries reveal">
+          <div class="section-head">
+            <small class="section-kicker">Suggested Plans</small>
+            <h2>Easy ways to enjoy the neighbourhood</h2>
+            <p>
+              These are simple ways to use the area well: reset quickly, fit in a good meal, stay out a little later, or make a free afternoon count.
+            </p>
+          </div>
+
+          <div class="itinerary-shell">
+            <div class="itinerary-tabs" id="itineraryTabs" aria-label="Suggested itineraries"></div>
+            <div class="itinerary-panel" id="itineraryPanel"></div>
+          </div>
+        </section>
+
+        <section id="flipbook" class="flipbook reveal">
+          <div class="flipbook-panel">
+            <div class="flipbook-grid">
+              <div class="flipbook-copy">
+                <small>The Quay Insider</small>
+                <h2>The Quay Insider</h2>
+                <p>
+                  For a more visual browse, this flipbook gives a fuller look at the neighbourhood. It works well as a quick reference before a stay and as something guests can dip into while they are here.
+                </p>
+                <div class="hero-actions">
+                  <a class="button" href="https://heyzine.com/flip-book/thequayinsider.html#page/44" target="_blank" rel="noopener noreferrer">Open The Quay Insider</a>
+                  <a class="ghost-button" href="#directory">Back to the guide</a>
+                </div>
+              </div>
+              <div class="flipbook-frame">
+                <iframe
+                  src="https://heyzine.com/flip-book/thequayinsider.html#page/44"
+                  title="The Quay Insider flipbook"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="closing reveal">
+          <div class="closing-panel">
+            <small>Contact Details</small>
+            <h2>Everything you need, in one place.</h2>
+            <p>
+              If someone wants to plan a stay, share this guide, or simply get in touch with the hotel, these are the key details to keep handy.
+            </p>
+
+            <div class="closing-grid contact-grid">
+              <article>
+                <strong>Hotel</strong>
+                <p>InterContinental Singapore Robertson Quay<br />1 Nanson Road<br />Singapore 238909</p>
+                <div class="contact-links">
+                  <a href="https://www.google.com/maps/search/?api=1&query=InterContinental%20Singapore%20Robertson%20Quay%2C%201%20Nanson%20Road%2C%20Singapore%20238909" target="_blank" rel="noopener noreferrer">Open Map</a>
+                </div>
+              </article>
+              <article>
+                <strong>Front Desk</strong>
+                <p>+65 6826 5000<br />Main hotel line for general enquiries and assistance.</p>
+                <div class="contact-links">
+                  <a href="tel:+6568265000">Call Hotel</a>
+                </div>
+              </article>
+              <article>
+                <strong>Email</strong>
+                <p>info.sinic@ihg.com<br />Useful for general enquiries and follow-up requests.</p>
+                <div class="contact-links">
+                  <a href="mailto:info.sinic@ihg.com">Send Email</a>
+                </div>
+              </article>
+              <article>
+                <strong>Useful Links</strong>
+                <p>Official hotel page and a direct map link for getting here.</p>
+                <div class="contact-links">
+                  <a href="https://www.ihg.com/intercontinental/hotels/us/en/singapore/sinic/hoteldetail" target="_blank" rel="noopener noreferrer">Hotel Page</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=InterContinental%20Singapore%20Robertson%20Quay%2C%201%20Nanson%20Road%2C%20Singapore%20238909" target="_blank" rel="noopener noreferrer">Getting Here</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="pdf-guide" id="pdfGuide" aria-label="Printable neighbourhood guide"></section>
+      </div>
+    </section>
+  </main>
+
+  <div id="pageStabilizer" class="page-stabilizer" aria-hidden="true"></div>
+
+  <script>
+    const distanceLabels = {
+      "in-hotel": "In-Hotel",
+      "5": "5-Min Walk",
+      "10": "10-Min Walk",
+      "15": "15-Min Walk"
+    };
+
+    const distanceDescriptions = {
+      "in-hotel": "Inside the hotel or immediately on property.",
+      "5": "The closest band outside the hotel for quick dining, coffee, essentials and an easy stroll.",
+      "10": "A slightly wider walk for stronger dining choice, wellness stops and nearby lifestyle spots.",
+      "15": "The longer walk band for Clarke Quay, bigger malls, extra transport links and broader exploring."
+    };
+
+    const categories = ["All", "Dining", "Cafes", "Bars", "Wellness", "Essentials", "Shopping", "Transport", "Culture"];
+    const distances = ["All", "in-hotel", "5", "10", "15"];
+
+    const venues = [
+      {
+        name: "Publico Ristorante & Garden",
+        distance: "in-hotel",
+        category: "Dining",
+        address: "Ground Floor, 1 Nanson Road, Singapore 238909",
+        note: "Italian dining by the river with wood-fired pizza, pasta and a lively alfresco garden terrace.",
+        tags: ["tired", "premium"]
+      },
+      {
+        name: "Wolfgang's Steakhouse",
+        distance: "in-hotel",
+        category: "Dining",
+        address: "#02-01, 1 Nanson Road, Singapore 238909",
+        note: "Classic New York steakhouse with dry-aged USDA Prime beef and a polished business-dinner feel.",
+        tags: ["premium"]
+      },
+      {
+        name: "UMMI Beirut",
+        distance: "in-hotel",
+        category: "Dining",
+        address: "1 Nanson Road, Singapore 238909",
+        note: "Contemporary Lebanese dining with mezze, charcoal grills and a refined halal-friendly option.",
+        tags: ["premium"]
+      },
+      {
+        name: "Ishi",
+        distance: "in-hotel",
+        category: "Dining",
+        address: "Level 2, 1 Nanson Road, Singapore 238909",
+        note: "Japanese dining on property for anyone who wants a polished meal without leaving the hotel.",
+        tags: ["premium"],
+        mapQuery: "Ishi InterContinental Singapore Robertson Quay"
+      },
+      {
+        name: "CODA",
+        distance: "in-hotel",
+        category: "Bars",
+        address: "Level 2, 1 Nanson Road, Singapore 238909",
+        note: "An intimate 15-seat avant-garde cocktail bar built for a quieter, design-led late-night drink.",
+        tags: ["late"]
+      },
+      {
+        name: "Club InterContinental Lounge",
+        distance: "in-hotel",
+        category: "Dining",
+        address: "Level 4, 1 Nanson Road, Singapore 238909",
+        note: "Breakfast, afternoon tea, evening cocktails and canapes for club guests. Ideal for a calm reset window.",
+        tags: ["tired", "essentials"]
+      },
+      {
+        name: "24-Hour Fitness Studio",
+        distance: "in-hotel",
+        category: "Wellness",
+        address: "1 Nanson Road, Singapore 238909",
+        note: "Useful for guests who prefer a quick workout without leaving the building.",
+        tags: ["tired", "essentials"]
+      },
+      {
+        name: "Outdoor Pool",
+        distance: "in-hotel",
+        category: "Wellness",
+        address: "1 Nanson Road, Singapore 238909",
+        note: "A simple, high-value recovery option for downtime between duties.",
+        tags: ["tired"]
+      },
+
+      {
+        name: "Long Beach Seafood",
+        distance: "5",
+        category: "Dining",
+        address: "#01-14, 60 Robertson Quay, Singapore 238252",
+        note: "A Singapore classic for black pepper crab, chilli crab and bigger shared dinners.",
+        tags: ["premium"]
+      },
+      {
+        name: "Tapas24",
+        distance: "5",
+        category: "Dining",
+        address: "#01-04, 60 Robertson Quay, Singapore 238252",
+        note: "Spanish plates, sangria and a strong group-dining format in a lively riverside setting.",
+        tags: []
+      },
+      {
+        name: "Les Bouchons Rive Gauche",
+        distance: "5",
+        category: "Dining",
+        address: "#01-02, 60 Robertson Quay, Singapore 238252",
+        note: "French steak-frites specialist with a dependable riverside business-meal atmosphere.",
+        tags: ["premium"]
+      },
+      {
+        name: "Aburiya Robertson Quay",
+        distance: "5",
+        category: "Dining",
+        address: "#01-03, 60 Robertson Quay, Singapore 238252",
+        note: "Japanese yakiniku with charcoal-grilled wagyu and sake bar energy.",
+        tags: []
+      },
+      {
+        name: "Carnaby",
+        distance: "5",
+        category: "Dining",
+        address: "#01-01, 60 Robertson Quay, Singapore 238252",
+        note: "Modern British comfort food, good fish and chips, and a relaxed pub-meets-bistro mood.",
+        tags: []
+      },
+      {
+        name: "Super Loco Robertson Quay",
+        distance: "5",
+        category: "Dining",
+        address: "#01-13, 60 Robertson Quay, Singapore 238252",
+        note: "Bright Mexican riverside dining with tacos, frozen margaritas and an easy social tone.",
+        tags: []
+      },
+      {
+        name: "Carnivore Brazilian Churrascaria",
+        distance: "5",
+        category: "Dining",
+        address: "#01-10/11, 30 Robertson Quay, Singapore 238251",
+        note: "Rodizio-style grilled meats carved tableside. Good for larger appetites and group dining.",
+        tags: []
+      },
+      {
+        name: "Merci Marcel Robertson Quay",
+        distance: "5",
+        category: "Dining",
+        address: "#01-01, 41 Robertson Quay, Singapore 238236",
+        note: "French bistro with terrace seating and a polished all-day riverside feel.",
+        tags: ["tired"]
+      },
+      {
+        name: "Rosso Vino",
+        distance: "10",
+        category: "Dining",
+        address: "15 Merbau Rd, #01-03, Singapore 239032",
+        note: "Wine-led Italian dining for quieter dinners and slower riverside evenings.",
+        tags: ["premium"],
+        mapQuery: "Rosso Vino 15 Merbau Rd #01-03 Singapore 239032"
+      },
+      {
+        name: "Bistecca Tuscan Steakhouse",
+        distance: "10",
+        category: "Dining",
+        address: "26 Mohamed Sultan Road, Singapore 238970",
+        note: "World-recognised Tuscan steakhouse in a heritage shophouse. Strong choice for premium entertaining.",
+        tags: ["premium"]
+      },
+      {
+        name: "Meta Restaurant",
+        distance: "10",
+        category: "Dining",
+        address: "9 Mohamed Sultan Road, Singapore 238959",
+        note: "Two-Michelin-starred modern Korean-led tasting menu for high-level hosting and special dinners.",
+        tags: ["premium"]
+      },
+
+      {
+        name: "MEMO Cafe",
+        distance: "5",
+        category: "Cafes",
+        address: "3 Nanson Road, Studio M Hotel Singapore, Singapore 238910",
+        note: "An easy nearby coffee and brunch stop for lighter mornings or a soft arrival reset.",
+        tags: ["tired"]
+      },
+      {
+        name: "Toby's Estate Coffee Roasters",
+        distance: "5",
+        category: "Cafes",
+        address: "8 Rodyk Street, Singapore 238216",
+        note: "One of Robertson Quay's most established specialty coffee stops.",
+        tags: ["tired"]
+      },
+      {
+        name: "Dutch Colony Coffee Co.",
+        distance: "10",
+        category: "Cafes",
+        address: "81 Clemenceau Avenue, #01-21, UE Square, Singapore 239917",
+        note: "Specialty coffee and a useful UE Square stop when guests also need nearby essentials.",
+        tags: ["tired", "essentials"]
+      },
+
+      {
+        name: "Boomarang Bistro & Bar",
+        distance: "5",
+        category: "Bars",
+        address: "60 Robertson Quay, #01-15 The Quayside, Singapore 238252",
+        note: "All-day Aussie bar-bistro with riverside seating and strong late-night utility.",
+        tags: ["late"]
+      },
+      {
+        name: "Harry's Clarke Quay",
+        distance: "15",
+        category: "Bars",
+        address: "3D River Valley Road, #01-01 Clarke Quay, Singapore 179023",
+        note: "Straightforward sports-bar style stop in Clarke Quay for a familiar late night option.",
+        tags: ["late"],
+        mapQuery: "Harry's Clarke Quay 3D River Valley Road #01-01 Clarke Quay Singapore 179023"
+      },
+
+      {
+        name: "Natureland Robertson Quay",
+        distance: "5",
+        category: "Wellness",
+        address: "30 Robertson Quay, #01-12/13 Riverside View, Singapore 238251",
+        note: "Award-winning massage and spa. One of the strongest recovery options in the immediate area.",
+        tags: ["tired"]
+      },
+      {
+        name: "Freedom Yoga Martin Road",
+        distance: "5",
+        category: "Wellness",
+        address: "9 Muthuraman Chetty Road, #01-01, Singapore 238931",
+        note: "A calm studio for morning movement or a slower day-off reset near the quay.",
+        tags: ["tired"]
+      },
+
+      {
+        name: "7-Eleven Robertson Quay",
+        distance: "5",
+        category: "Essentials",
+        address: "60 Robertson Quay, Singapore 238252",
+        note: "Fast convenience stop for snacks, drinks and small practical needs.",
+        tags: ["essentials"]
+      },
+      {
+        name: "CS Fresh @ UE Square",
+        distance: "10",
+        category: "Essentials",
+        address: "81 Clemenceau Avenue, #02-18, UE Square, Singapore 239917",
+        note: "A full grocery option for guests who want more than convenience-store basics.",
+        tags: ["essentials"]
+      },
+
+      {
+        name: "UE Square",
+        distance: "10",
+        category: "Shopping",
+        address: "81 Clemenceau Avenue, Singapore 239917",
+        note: "Useful lifestyle stop combining groceries, coffee and practical daily shopping.",
+        tags: ["essentials"]
+      },
+
+      {
+        name: "SanSara",
+        distance: "10",
+        category: "Dining",
+        address: "Grand Copthorne Waterfront Hotel, 392 Havelock Road, Singapore 169663",
+        note: "Refined North Indian dining with a more dressed-up riverside hotel setting.",
+        tags: ["premium"]
+      },
+      {
+        name: "Po Restaurant",
+        distance: "5",
+        category: "Dining",
+        address: "The Warehouse Hotel, 320 Havelock Road, Singapore 169628",
+        note: "Modern Singaporean dining in one of Robertson Quay's most attractive heritage properties.",
+        tags: ["premium"]
+      },
+      {
+        name: "Entrepot",
+        distance: "10",
+        category: "Dining",
+        address: "1 Unity St, Singapore 237983",
+        note: "Polished heritage-hotel dining and cocktails with a more intimate tone.",
+        tags: ["premium"],
+        mapQuery: "Entrepot Restaurant 1 Unity St Singapore 237983"
+      },
+      {
+        name: "The Book Cafe",
+        distance: "5",
+        category: "Cafes",
+        address: "20 Martin Road, #01-02 Seng Kee Building, Singapore 239070",
+        note: "Comfortable all-day cafe with sofas, books, power points and a very easy downtime feel.",
+        tags: ["tired"]
+      },
+      {
+        name: "Common Man Coffee Roasters",
+        distance: "5",
+        category: "Cafes",
+        address: "22 Martin Road, #01-00, Singapore 239058",
+        note: "One of Singapore's benchmark specialty coffee addresses and a dependable brunch stop.",
+        tags: ["tired"]
+      },
+      {
+        name: "WILD/FIRE",
+        distance: "10",
+        category: "Dining",
+        address: "207 River Valley Road, #01-59 UE Square, Singapore 238275",
+        note: "Wood-fired grill known for burgers, steaks and a modern comfort-food format. Good correction from older hotel-location listings.",
+        tags: []
+      },
+
+      {
+        name: "One Prawn & Co",
+        distance: "10",
+        category: "Dining",
+        address: "46 Kim Yam Road, #01-10, New Bahru, Singapore 239351",
+        note: "Modern Asian seafood by day and wood-fire energy by night in New Bahru.",
+        tags: ["premium"]
+      },
+      {
+        name: "Kotuwa",
+        distance: "10",
+        category: "Dining",
+        address: "46 Kim Yam Road, #01-03, New Bahru, Singapore 239351",
+        note: "Sri Lankan dining with crab curry, hoppers and one of the most talked-about menus nearby.",
+        tags: ["premium"]
+      },
+      {
+        name: "Artichoke Pizza Parlor",
+        distance: "10",
+        category: "Dining",
+        address: "46 Kim Yam Road, #01-02, New Bahru, Singapore 239351",
+        note: "Bjorn Shen's new-school pizza stop with a bold, more casual style.",
+        tags: []
+      },
+      {
+        name: "One Fattened Calf Burgers",
+        distance: "10",
+        category: "Dining",
+        address: "46 Kim Yam Road, #01-11, New Bahru, Singapore 239351",
+        note: "Highly regarded burger stop for anyone who wants something fast but quality-led.",
+        tags: []
+      },
+      {
+        name: "The Coconut Club River Valley",
+        distance: "10",
+        category: "Dining",
+        address: "46 Kim Yam Road, New Bahru, Singapore 239351",
+        note: "A polished local-food pick for nasi lemak and a distinctly Singapore meal in a contemporary setting.",
+        tags: []
+      },
+      {
+        name: "PPP Coffee @ New Bahru",
+        distance: "10",
+        category: "Cafes",
+        address: "46 Kim Yam Road, #01-06, Singapore 239351",
+        note: "High-quality specialty coffee, pastries and even coffee omakase in New Bahru.",
+        tags: ["tired"]
+      },
+      {
+        name: "Odem",
+        distance: "10",
+        category: "Bars",
+        address: "46 Kim Yam Road, #01-17, New Bahru, Singapore 239351",
+        note: "Craft makgeolli bar with modern Korean dishes and a sharper night-out identity.",
+        tags: ["late"]
+      },
+      {
+        name: "Hideaway New Bahru",
+        distance: "10",
+        category: "Wellness",
+        address: "46 Kim Yam Road, #05-07/08, New Bahru, Singapore 239351",
+        note: "Infrared sauna, cold plunge and massage. Excellent for recovery-focused stays.",
+        tags: ["tired"]
+      },
+      {
+        name: "New Bahru",
+        distance: "10",
+        category: "Shopping",
+        address: "46 Kim Yam Road, Singapore 239351",
+        note: "Singapore's new design-led lifestyle hub mixing food, retail, wellness and independent brands.",
+        tags: []
+      },
+
+      {
+        name: "CQ @ Clarke Quay",
+        distance: "15",
+        category: "Bars",
+        address: "3 River Valley Rd, Singapore 179024",
+        note: "Singapore's most established nightlife district for anyone who wants a bigger after-dark option.",
+        tags: ["late"],
+        mapQuery: "CQ @ Clarke Quay 3 River Valley Rd Singapore 179024"
+      },
+      {
+        name: "Boat Quay",
+        distance: "15",
+        category: "Bars",
+        address: "Bonham St, Singapore 049782",
+        note: "Historic riverside bar strip with alfresco drinking and a more tourist-facing energy.",
+        tags: ["late"],
+        mapQuery: "Boat Quay Bonham St Singapore 049782"
+      },
+      {
+        name: "Zouk / Phuture",
+        distance: "15",
+        category: "Bars",
+        address: "3C River Valley Road, The Cannery, Singapore 179022",
+        note: "Singapore's iconic club complex for anyone wanting a full-scale nightlife option.",
+        tags: ["late"]
+      },
+
+      {
+        name: "Clarke Quay Central",
+        distance: "15",
+        category: "Shopping",
+        address: "6 Eu Tong Sen Street, Singapore 059817",
+        note: "Useful retail-and-food stop attached to Clarke Quay MRT.",
+        tags: ["essentials"]
+      },
+      {
+        name: "Great World",
+        distance: "15",
+        category: "Shopping",
+        address: "1 Kim Seng Promenade, Singapore 237994",
+        note: "Major mall for brands, practical shopping and one of the district's most useful indoor options.",
+        tags: ["essentials"]
+      },
+
+      {
+        name: "Clarke Quay MRT",
+        distance: "15",
+        category: "Transport",
+        address: "10 Eu Tong Sen Street, Singapore 059815",
+        note: "North East Line access into central Singapore and onward connections.",
+        tags: ["essentials"]
+      },
+      {
+        name: "Havelock MRT",
+        distance: "10",
+        category: "Transport",
+        address: "Havelock Road, Thomson-East Coast Line, Singapore",
+        note: "One of the nearest MRT stations from the hotel, useful for low-friction city movement.",
+        tags: ["essentials"]
+      },
+      {
+        name: "Fort Canning MRT",
+        distance: "10",
+        category: "Transport",
+        address: "River Valley Road, Downtown Line, Singapore",
+        note: "Another practical nearby MRT option, especially for access toward Bras Basah and Bugis.",
+        tags: ["essentials"]
+      },
+      {
+        name: "Great World MRT",
+        distance: "15",
+        category: "Transport",
+        address: "Kim Seng Promenade, Thomson-East Coast Line, Singapore",
+        note: "Useful Thomson-East Coast Line access tied directly to Great World.",
+        tags: ["essentials"]
+      },
+
+      {
+        name: "Fort Canning Park",
+        distance: "15",
+        category: "Culture",
+        address: "River Valley Road / Canning Rise / Hill Street, Singapore",
+        note: "Historic hill park with lawns, heritage spaces and a very strong day-off walking route.",
+        tags: []
+      },
+      {
+        name: "Singapore River Promenade",
+        distance: "5",
+        category: "Culture",
+        address: "Along Singapore River, Robertson Quay to Clarke Quay, Singapore",
+        note: "The easiest scenic route for a decompress walk, jog or casual riverside exploration.",
+        tags: ["tired"]
+      },
+      {
+        name: "Kim Seng Park",
+        distance: "10",
+        category: "Wellness",
+        address: "Kim Seng Promenade, Singapore",
+        note: "Riverside green space for jogging, walking and light day-off movement.",
+        tags: ["tired"]
+      },
+      {
+        name: "Alkaff Bridge",
+        distance: "5",
+        category: "Culture",
+        address: "Robertson Quay, Singapore",
+        note: "A distinctive painted bridge and one of the area's better-known visual landmarks.",
+        tags: []
+      },
+      {
+        name: "STPI Creative Workshop & Gallery",
+        distance: "5",
+        category: "Culture",
+        address: "41 Robertson Quay, Singapore 238236",
+        note: "Free contemporary art gallery and one of the strongest quiet culture options nearby.",
+        tags: []
+      },
+      {
+        name: "Singapore Repertory Theatre",
+        distance: "10",
+        category: "Culture",
+        address: "20 Merbau Rd, Singapore 239035",
+        note: "High-quality theatre programming for guests staying long enough to catch an evening show.",
+        tags: [],
+        mapQuery: "Singapore Repertory Theatre (SG Clean) 20 Merbau Rd Singapore 239035"
+      },
+      {
+        name: "Chinatown",
+        distance: "15",
+        category: "Culture",
+        address: "75 Pagoda St, Singapore 059234",
+        note: "Temples, heritage shophouses, hawker food and easy cultural depth on a day off.",
+        tags: [],
+        mapQuery: "Chinatown Singapore 75 Pagoda St Singapore 059234"
+      }
+    ];
+
+    const curations = {
+      tired: {
+        title: "Easy reset",
+        subtitle: "Reset quickly without overcommitting the evening.",
+        description: "These picks are good when someone wants to slow down, eat lightly, get a coffee, or ease into the stay.",
+        venues: ["Club InterContinental Lounge", "Natureland Robertson Quay", "MEMO Cafe", "Singapore River Promenade"]
+      },
+      late: {
+        title: "Late-night options",
+        subtitle: "For anyone who still wants the city after dark.",
+        description: "From a quiet cocktail to a bigger night out, these are the easiest after-hours options nearby.",
+        venues: ["CODA", "Boomarang Bistro & Bar", "Harry's Clarke Quay", "Zouk / Phuture"]
+      },
+      essentials: {
+        title: "Daily essentials",
+        subtitle: "The useful things people end up needing.",
+        description: "Groceries, convenience and nearby transport, all kept simple.",
+        venues: ["7-Eleven Robertson Quay", "CS Fresh @ UE Square", "Clarke Quay MRT", "Havelock MRT"]
+      },
+      premium: {
+        title: "Premium dining",
+        subtitle: "Strong choices for a special dinner or a polished evening.",
+        description: "When dinner matters a little more, these are some of the best nearby tables.",
+        venues: ["Wolfgang's Steakhouse", "UMMI Beirut", "Bistecca Tuscan Steakhouse", "Meta Restaurant"]
+      }
+    };
+
+    const itineraries = [
+      {
+        id: "reset",
+        title: "30-minute reset",
+        timing: "Fast arrival unwind",
+        bestFor: "Short reset window",
+        summary: "Keep it simple, low-energy and close to the hotel.",
+        steps: [
+          {
+            title: "Start with a quiet drink or coffee",
+            body: "If club access applies, the Club InterContinental Lounge is the cleanest first stop. Otherwise MEMO Cafe is an easy nearby fallback.",
+            jump: "Club InterContinental Lounge"
+          },
+          {
+            title: "Take a short riverside walk",
+            body: "The Singapore River Promenade gives just enough air and movement to reset the body clock without turning into a long outing.",
+            jump: "Singapore River Promenade"
+          },
+          {
+            title: "Finish with recovery, not noise",
+            body: "If more reset is needed, Natureland Robertson Quay is one of the best nearby massage options and keeps the evening efficient.",
+            jump: "Natureland Robertson Quay"
+          }
+        ]
+      },
+      {
+        id: "layover",
+        title: "2-hour meal window",
+        timing: "Short meal window",
+        bestFor: "Limited time",
+        summary: "A polished meal plan that still respects the clock.",
+        steps: [
+          {
+            title: "Walk straight into the strongest 5-minute dining band",
+            body: "The Quayside cluster gives fast access to Tapas24, Les Bouchons, Long Beach Seafood and Super Loco without transport planning.",
+            jump: "Tapas24"
+          },
+          {
+            title: "Match the mood to the group",
+            body: "Choose Tapas24 for sharing plates, Les Bouchons for steak-frites, or Long Beach for a recognisably Singaporean seafood meal.",
+            jump: "Long Beach Seafood"
+          },
+          {
+            title: "Close with coffee nearby",
+            body: "Toby's Estate or Dutch Colony keeps the route efficient and gives the group a clean finish before heading back.",
+            jump: "Toby's Estate Coffee Roasters"
+          }
+        ]
+      },
+      {
+        id: "night",
+        title: "Late-night food and drinks",
+        timing: "After-dark option",
+        bestFor: "Still in the mood to go out",
+        summary: "Choose between intimate, casual, or full-scale nightlife.",
+        steps: [
+          {
+            title: "Begin in-hotel if the mood is calmer",
+            body: "CODA is the best first stop when the brief is one proper cocktail in a compact, high-design room.",
+            jump: "CODA"
+          },
+          {
+            title: "Step up to the quay if the group wants energy but not a club",
+            body: "Boomarang and Harry's are both easy-entry options when the group wants something more lively without committing to a full club night.",
+            jump: "Boomarang Bistro & Bar"
+          },
+          {
+            title: "Escalate only if the group wants a full night out",
+            body: "Clarke Quay and Zouk / Phuture are close enough to access on foot, without making the whole evening dependent on logistics.",
+            jump: "Zouk / Phuture"
+          }
+        ]
+      },
+      {
+        id: "dayoff",
+        title: "Day-off exploration",
+        timing: "Half day to full day",
+        bestFor: "Longer stays and free afternoons",
+        summary: "A smarter Robertson Quay circuit that feels like Singapore, not a checklist.",
+        steps: [
+          {
+            title: "Start at New Bahru",
+            body: "PPP Coffee, Kotuwa, One Prawn & Co and Hideaway make this the strongest current lifestyle cluster nearby.",
+            jump: "New Bahru"
+          },
+          {
+            title: "Move into greenery and heritage",
+            body: "Fort Canning Park and the riverside promenade give a very different rhythm from the hotel zone without leaving the central area.",
+            jump: "Fort Canning Park"
+          },
+          {
+            title: "Add an arts stop if the pace stays light",
+            body: "STPI is free, quiet and high-quality. It works especially well for guests who want something cultural but not overplanned.",
+            jump: "STPI Creative Workshop & Gallery"
+          },
+          {
+            title: "Finish in Chinatown or back along the river",
+            body: "Chinatown adds heritage and hawker energy; the promenade keeps the route scenic if the team prefers a slower close.",
+            jump: "Chinatown"
+          }
+        ]
+      }
+    ];
+
+    const quickActions = [
+      {
+        id: "tired",
+        label: "Need a reset",
+        copy: "Massage, coffee, riverside air and somewhere calm."
+      },
+      {
+        id: "essentials",
+        label: "Grab the essentials",
+        copy: "Groceries, convenience and the nearest useful transport."
+      },
+      {
+        id: "premium",
+        label: "Find a great dinner",
+        copy: "The best nearby picks for a polished evening out."
+      },
+      {
+        id: "late",
+        label: "Go out after dark",
+        copy: "From quiet drinks to a proper night out."
+      }
+    ];
+
+    const printHighlightsByDistance = {
+      "5": [
+        "Long Beach Seafood",
+        "Tapas24",
+        "Toby's Estate Coffee Roasters",
+        "Natureland Robertson Quay",
+        "STPI Creative Workshop & Gallery",
+        "Singapore River Promenade"
+      ],
+      "10": [
+        "Rosso Vino",
+        "Entrepot",
+        "Meta Restaurant",
+        "Bistecca Tuscan Steakhouse",
+        "New Bahru",
+        "Singapore Repertory Theatre"
+      ],
+      "15": [
+        "CQ @ Clarke Quay",
+        "Clarke Quay MRT",
+        "Great World",
+        "Zouk / Phuture",
+        "Boat Quay",
+        "Chinatown"
+      ]
+    };
+
+    const state = {
+      search: "",
+      distance: "All",
+      category: "All",
+      curation: null,
+      itinerary: itineraries[0].id
+    };
+
+    const directoryGroups = document.getElementById("directoryGroups");
+    const searchInput = document.getElementById("searchInput");
+    const distanceFilters = document.getElementById("distanceFilters");
+    const categoryFilters = document.getElementById("categoryFilters");
+    const clearFilters = document.getElementById("clearFilters");
+    const resultMeta = document.getElementById("resultMeta");
+    const highlightGrid = document.getElementById("highlightGrid");
+    const quickGrid = document.getElementById("quickGrid");
+    const itineraryTabs = document.getElementById("itineraryTabs");
+    const itineraryPanel = document.getElementById("itineraryPanel");
+    const pdfGuide = document.getElementById("pdfGuide");
+    const pageStabilizer = document.getElementById("pageStabilizer");
+
+    function slugify(text) {
+      return text
+        .toLowerCase()
+        .replace(/&/g, "and")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    }
+
+    function mapLinkFor(venue) {
+      const query = venue.mapQuery || `${venue.name}, ${venue.address}`;
+      return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+    }
+
+    function venueId(name) {
+      return `venue-${slugify(name)}`;
+    }
+
+    function categoryBadgeLabel(category) {
+      return category === "Cafes" ? "CAFES" : category;
+    }
+
+    function updateHeroCounts() {
+      document.getElementById("heroVenueCount").textContent = `${venues.length} picks`;
+      const mrtCount = venues.filter((venue) => venue.category === "Transport").length;
+      document.getElementById("heroMrtCount").textContent = `${mrtCount} nearby nodes`;
+
+      ["in-hotel", "5", "10", "15"].forEach((key) => {
+        const count = venues.filter((venue) => venue.distance === key).length;
+        const target = document.getElementById(`count-${key}`);
+        if (target) {
+          target.textContent = `${count} venues`;
+        }
+      });
+    }
+
+    function renderQuickActions() {
+      quickGrid.innerHTML = quickActions.map((item) => `
+        <button class="chip-button ${state.curation === item.id ? "active" : ""}" type="button" data-curation="${item.id}">
+          <strong>${item.label}</strong>
+          <span>${item.copy}</span>
+        </button>
+      `).join("");
+    }
+
+    function renderHighlights() {
+      highlightGrid.innerHTML = Object.entries(curations).map(([key, item]) => {
+        const picks = item.venues
+          .map((name) => venues.find((venue) => venue.name === name))
+          .filter(Boolean)
+          .slice(0, 4);
+
+        return `
+          <article class="highlight-card">
+            <small>Curated highlight</small>
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>
+            <div class="pick-list">
+              ${picks.map((venue) => `
+                <button class="mini-link" type="button" data-jump="${venue.name}">
+                  ${venue.name}
+                </button>
+              `).join("")}
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function renderFilterPills() {
+      distanceFilters.innerHTML = distances.map((value) => {
+        const label = value === "All" ? "All distances" : distanceLabels[value];
+        return `
+          <button
+            class="filter-pill ${state.distance === value ? "active" : ""}"
+            type="button"
+            data-filter-type="distance"
+            data-value="${value}"
+            aria-pressed="${state.distance === value}"
+          >
+            ${label}
+          </button>
+        `;
+      }).join("");
+
+      categoryFilters.innerHTML = categories.map((value) => `
+        <button
+          class="filter-pill ${state.category === value ? "active" : ""}"
+          type="button"
+          data-filter-type="category"
+          data-value="${value}"
+          aria-pressed="${state.category === value}"
+        >
+          ${value}
+        </button>
+      `).join("");
+    }
+
+    function filteredVenues() {
+      const search = state.search.trim().toLowerCase();
+      return venues.filter((venue) => {
+        const matchesSearch = !search || [
+          venue.name,
+          venue.category,
+          venue.address,
+          venue.note,
+          ...(venue.tags || [])
+        ].join(" ").toLowerCase().includes(search);
+
+        const matchesDistance = state.distance === "All" || venue.distance === state.distance;
+        const matchesCategory = state.category === "All" || venue.category === state.category;
+        const matchesCuration = !state.curation || (venue.tags || []).includes(state.curation);
+
+        return matchesSearch && matchesDistance && matchesCategory && matchesCuration;
+      });
+    }
+
+    function filteredVenuesForState(snapshot) {
+      const search = (snapshot.search || "").trim().toLowerCase();
+      return venues.filter((venue) => {
+        const matchesSearch = !search || [
+          venue.name,
+          venue.category,
+          venue.address,
+          venue.note,
+          ...(venue.tags || [])
+        ].join(" ").toLowerCase().includes(search);
+
+        const matchesDistance = snapshot.distance === "All" || venue.distance === snapshot.distance;
+        const matchesCategory = snapshot.category === "All" || venue.category === snapshot.category;
+        const matchesCuration = !snapshot.curation || (venue.tags || []).includes(snapshot.curation);
+
+        return matchesSearch && matchesDistance && matchesCategory && matchesCuration;
+      });
+    }
+
+    function getStableSpacerHeight(snapshot) {
+      const result = filteredVenuesForState(snapshot);
+      const count = result.length;
+      const groupCount = ["in-hotel", "5", "10", "15"]
+        .filter((distance) => result.some((venue) => venue.distance === distance))
+        .length;
+      // key format: `${distance}|${category}`
+      // higher number = more hold below = less upward push after filtering
+      const specificSpacerHeights = {
+        "All|Cafes": 1820,
+        "All|Wellness": 2060,
+        "All|Essentials": 2440,
+        "All|Shopping": 2320,
+        "All|Transport": 2320,
+        "All|Culture": 2140,
+
+        "in-hotel|All": 2060,
+        "in-hotel|Dining": 2340,
+        "in-hotel|Cafes": 2880,
+        "in-hotel|Bars": 2880,
+        "in-hotel|Wellness": 2880,
+        "in-hotel|Essentials": 2880,
+        "in-hotel|Shopping": 2880,
+        "in-hotel|Transport": 2880,
+        "in-hotel|Culture": 2880,
+
+        "5|All": 1280,
+        "5|Bars": 2880,
+        "5|Dining": 2880,
+        "5|Cafes": 2880,
+        "5|Wellness": 2880,
+        "5|Essentials": 2880,
+        "5|Culture": 2880,
+        "5|Shopping": 2880,
+        "5|Transport": 2880,
+        "10|All": 1280,
+        "10|Dining": 2880,
+        "10|Cafes": 2880,
+        "10|Bars": 2880,
+        "10|Wellness": 2880,
+        "10|Essentials": 2880,
+        "10|Shopping": 2880,
+        "10|Transport": 2880,
+        "10|Culture": 2880,
+        "15|All": 1780,
+        "15|Dining": 2880,
+        "15|Cafes": 2880,
+        "15|Bars": 2880,
+        "15|Wellness": 2880,
+        "15|Essentials": 2880,
+        "15|Shopping": 2880,
+        "15|Transport": 2880,
+        "15|Culture": 2880
+      };
+      const specificKey = `${snapshot.distance}|${snapshot.category}`;
+
+      if ((snapshot.search || "").trim()) {
+        if (count <= 2) return 1080;
+        if (count <= 4) return 920;
+        if (count <= 6) return 760;
+        return 520;
+      }
+
+      if (specificSpacerHeights[specificKey] !== undefined) {
+        return specificSpacerHeights[specificKey];
+      }
+
+      const categorySpacerHeights = {
+        All: 0,
+        Dining: 0,
+        Cafes: 820,
+        Bars: 920,
+        Wellness: 960,
+        Essentials: 1080,
+        Shopping: 920,
+        Transport: 920,
+        Culture: 860
+      };
+
+      const distanceSpacerHeights = {
+        All: 0,
+        "in-hotel": 860,
+        "5": 280,
+        "10": 240,
+        "15": 760
+      };
+
+      if (snapshot.distance !== "All" && snapshot.category !== "All") {
+        if (count <= 1) return 1180;
+        if (count <= 2) return 1080;
+        if (count <= 4) return 940;
+        if (count <= 6) return 820;
+        return 640;
+      }
+
+      if (snapshot.category !== "All") {
+        return categorySpacerHeights[snapshot.category] ?? 0;
+      }
+
+      if (snapshot.distance !== "All") {
+        return distanceSpacerHeights[snapshot.distance] ?? 0;
+      }
+
+      if (count >= 20) return 0;
+      if (count >= 10) return 260;
+      if (groupCount >= 3) return 900;
+      if (groupCount === 2) return 780;
+      return 620;
+    }
+
+    function renderDirectory() {
+      const result = filteredVenues();
+
+      const curationText = state.curation ? ` | Curation: ${curations[state.curation].title}` : "";
+      resultMeta.textContent = `${result.length} result${result.length === 1 ? "" : "s"}${curationText}`;
+
+      if (!result.length) {
+        directoryGroups.innerHTML = `
+          <div class="empty-state">
+            Nothing matches the current search or filters just yet.<br />
+            Try clearing them or switching to a broader category.
+          </div>
+        `;
+        return;
+      }
+
+      const grouped = ["in-hotel", "5", "10", "15"]
+        .map((distance) => ({
+          distance,
+          items: result.filter((venue) => venue.distance === distance)
+        }))
+        .filter((group) => group.items.length);
+
+      directoryGroups.innerHTML = grouped.map((group) => `
+        <section class="group" id="group-${group.distance}">
+          <div class="group-head">
+            <strong>
+              <span>${distanceLabels[group.distance]}</span>
+              <em>${group.items.length} venue${group.items.length === 1 ? "" : "s"}</em>
+            </strong>
+            <span>${distanceDescriptions[group.distance]}</span>
+          </div>
+          <div class="card-grid">
+            ${group.items.map((venue) => `
+              <article class="venue-card" id="${venueId(venue.name)}">
+                <div class="card-top">
+                  <div>
+                    <h3>${venue.name}</h3>
+                  </div>
+                  <div class="tag-stack">
+                    <button class="badge distance" type="button" data-card-distance="${venue.distance}">${distanceLabels[venue.distance]}</button>
+                    <button class="badge category" type="button" data-card-category="${venue.category}">${categoryBadgeLabel(venue.category)}</button>
+                  </div>
+                </div>
+                <p class="address">${venue.address}</p>
+                <p class="note">${venue.note}</p>
+                <div class="note-tags">
+                  ${(venue.tags || []).map((tag) => `<span>${tag === "tired" ? "Good for a reset" : tag === "late" ? "Open later" : tag === "essentials" ? "Everyday useful" : tag === "premium" ? "Premium dinner" : tag}</span>`).join("")}
+                </div>
+                ${venue.distance === "in-hotel" ? "" : `
+                <div class="card-actions">
+                  <a class="card-link" href="${mapLinkFor(venue)}" target="_blank" rel="noopener noreferrer">Open map</a>
+                </div>
+                `}
+              </article>
+            `).join("")}
+          </div>
+        </section>
+      `).join("");
+    }
+
+    function renderItineraries() {
+      itineraryTabs.innerHTML = itineraries.map((item) => `
+        <button
+          class="itinerary-tab ${state.itinerary === item.id ? "active" : ""}"
+          type="button"
+          data-itinerary="${item.id}"
+          aria-pressed="${state.itinerary === item.id}"
+        >
+          ${item.title}
+        </button>
+      `).join("");
+
+      const active = itineraries.find((item) => item.id === state.itinerary) || itineraries[0];
+      itineraryPanel.innerHTML = `
+        <div class="itinerary-top">
+          <small>${active.timing}</small>
+          <h3>${active.title}</h3>
+          <p>${active.summary}</p>
+          <div class="itinerary-meta">
+            <span>${active.bestFor}</span>
+            <span>Walk-first</span>
+            <span>Easy to use</span>
+          </div>
+        </div>
+        <div class="itinerary-body">
+          ${active.steps.map((step, index) => `
+            <article class="step">
+              <div class="step-index">${index + 1}</div>
+              <div>
+                <strong>${step.title}</strong>
+                <p>${step.body}</p>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function renderPdfGuide() {
+      const intro = `A short print version of the neighbourhood guide, focused on the most useful spots within a 5, 10, or 15-minute walk from the hotel.`;
+      const hotelEmblem = window.__hotelEmblem || "assets/hotel-emblem.png";
+
+      pdfGuide.innerHTML = `
+        <div class="pdf-shell">
+          <div class="pdf-brand">
+            <img src="${hotelEmblem}" alt="InterContinental Robertson Quay emblem" />
+            <div>
+              <strong>InterContinental Singapore Robertson Quay</strong>
+              <span>Walkable neighbourhood highlights</span>
+            </div>
+          </div>
+
+          <div class="pdf-head">
+            <h1>Walkable highlights around the hotel</h1>
+            <p>${intro}</p>
+          </div>
+
+          <div class="pdf-meta">
+            <article>
+              <span>Included</span>
+              <strong>5, 10 and 15-minute walk bands only</strong>
+            </article>
+            <article>
+              <span>Best for</span>
+              <strong>Quick guest overview and client sharing</strong>
+            </article>
+            <article>
+              <span>Hotel</span>
+              <strong>1 Nanson Road, Singapore 238909</strong>
+            </article>
+          </div>
+
+          <div class="pdf-bands">
+            ${["5", "10", "15"].map((distance) => {
+              const items = printHighlightsByDistance[distance]
+                .map((name) => venues.find((venue) => venue.name === name))
+                .filter(Boolean);
+
+              return `
+                <section class="pdf-band">
+                  <div class="pdf-band-head">
+                    <strong>${distanceLabels[distance]}</strong>
+                    <span>${distanceDescriptions[distance]}</span>
+                  </div>
+                  <div class="pdf-band-grid">
+                    ${items.map((venue) => `
+                      <article class="pdf-venue">
+                        <div class="pdf-venue-top">
+                          <h3>${venue.name}</h3>
+                          <span class="pdf-type">${venue.category}</span>
+                        </div>
+                        <p class="pdf-address">${venue.address}</p>
+                        <p class="pdf-note">${venue.note}</p>
+                      </article>
+                    `).join("")}
+                  </div>
+                </section>
+              `;
+            }).join("")}
+          </div>
+
+          <div class="pdf-footer">
+            For the full interactive version with search, filters, and the complete directory, use the HTML guide.
+          </div>
+        </div>
+      `;
+    }
+
+    function setState(next) {
+      Object.assign(state, next);
+      renderQuickActions();
+      renderFilterPills();
+      renderDirectory();
+      renderItineraries();
+    }
+
+    function setPageStabilizerHeight(height) {
+      const nextHeight = Math.max(0, Math.ceil(height || 0));
+      pageStabilizer.style.height = nextHeight > 0 ? `${nextHeight}px` : "";
+    }
+
+    function setStatePreservingFilters(next) {
+      const nextState = { ...state, ...next };
+      const previousResultsHeight = Math.max(0, Math.ceil(directoryGroups.getBoundingClientRect().height));
+      const currentSpacerHeight = Math.max(0, Math.ceil(pageStabilizer.getBoundingClientRect().height));
+      const targetSpacerHeight = getStableSpacerHeight(nextState);
+
+      directoryGroups.style.minHeight = previousResultsHeight > 0 ? `${previousResultsHeight}px` : "";
+      setPageStabilizerHeight(Math.max(currentSpacerHeight, targetSpacerHeight));
+
+      setState(next);
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          directoryGroups.style.minHeight = "";
+          setPageStabilizerHeight(targetSpacerHeight);
+        });
+      });
+    }
+
+    function jumpToVenue(name) {
+      const el = document.getElementById(venueId(name));
+      if (!el) {
+        setState({ search: name, distance: "All", category: "All", curation: null });
+        searchInput.value = name;
+        setTimeout(() => {
+          const fallback = document.getElementById(venueId(name));
+          if (fallback) {
+            fallback.scrollIntoView({ behavior: "smooth", block: "center" });
+            fallback.classList.add("flash");
+            setTimeout(() => fallback.classList.remove("flash"), 1300);
+          }
+        }, 40);
+        return;
+      }
+
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      el.classList.add("flash");
+      setTimeout(() => el.classList.remove("flash"), 1300);
+    }
+
+    searchInput.addEventListener("input", (event) => {
+      setStatePreservingFilters({ search: event.target.value });
+    });
+
+    distanceFilters.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-filter-type='distance']");
+      if (!button) return;
+      setStatePreservingFilters({ distance: button.dataset.value });
+    });
+
+    categoryFilters.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-filter-type='category']");
+      if (!button) return;
+      setStatePreservingFilters({ category: button.dataset.value });
+    });
+
+    quickGrid.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-curation]");
+      if (!button) return;
+      const next = state.curation === button.dataset.curation ? null : button.dataset.curation;
+      setStatePreservingFilters({ curation: next, search: "", distance: "All", category: "All" });
+    });
+
+    highlightGrid.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-jump]");
+      if (!button) return;
+      jumpToVenue(button.dataset.jump);
+    });
+
+    itineraryTabs.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-itinerary]");
+      if (!button) return;
+      setState({ itinerary: button.dataset.itinerary });
+    });
+
+    clearFilters.addEventListener("click", () => {
+      searchInput.value = "";
+      setStatePreservingFilters({
+        search: "",
+        distance: "All",
+        category: "All",
+        curation: null
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      const distanceButton = event.target.closest("[data-card-distance]");
+      if (distanceButton) {
+        setStatePreservingFilters({ distance: distanceButton.dataset.cardDistance, category: "All", curation: null, search: "" });
+        return;
+      }
+
+      const categoryButton = event.target.closest("[data-card-category]");
+      if (categoryButton) {
+        setStatePreservingFilters({ category: categoryButton.dataset.cardCategory, distance: "All", curation: null, search: "" });
+        return;
+      }
+    });
+
+    function setupReveal() {
+      const items = document.querySelectorAll(".reveal");
+      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduced || !("IntersectionObserver" in window)) {
+        items.forEach((item) => item.classList.add("visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.16 });
+
+      items.forEach((item) => observer.observe(item));
+    }
+
+    updateHeroCounts();
+    renderQuickActions();
+    renderHighlights();
+    renderFilterPills();
+    renderDirectory();
+    setPageStabilizerHeight(getStableSpacerHeight(state));
+    renderItineraries();
+    renderPdfGuide();
+    setupReveal();
+  </script>
+</body>
+</html>
