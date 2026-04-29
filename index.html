@@ -3340,58 +3340,62 @@
       // key format: `${distance}|${category}`
       // higher number = more hold below = less upward push after filtering
       const specificSpacerHeights = {
-        "All|Cafes": 1820,
-        "All|Wellness": 2060,
-        "All|Essentials": 2440,
-        "All|Shopping": 2320,
-        "All|Transport": 2320,
-        "All|Culture": 2140,
+        "All|Dining": 5600,
+        "All|Cafes": 6800,
+        "All|Bars": 6400,
+        "All|Wellness": 6400,
+        "All|Essentials": 6800,
+        "All|Shopping": 6400,
+        "All|Transport": 6400,
+        "All|Culture": 6400,
 
-        "in-hotel|All": 2060,
-        "in-hotel|Dining": 2340,
-        "in-hotel|Cafes": 2880,
-        "in-hotel|Bars": 2880,
-        "in-hotel|Wellness": 2880,
-        "in-hotel|Essentials": 2880,
-        "in-hotel|Shopping": 2880,
-        "in-hotel|Transport": 2880,
-        "in-hotel|Culture": 2880,
+        "in-hotel|All": 6800,
+        "in-hotel|Dining": 7600,
+        "in-hotel|Cafes": 8200,
+        "in-hotel|Bars": 8200,
+        "in-hotel|Wellness": 8200,
+        "in-hotel|Essentials": 8200,
+        "in-hotel|Shopping": 8200,
+        "in-hotel|Transport": 8200,
+        "in-hotel|Culture": 8200,
 
-        "5|All": 1280,
-        "5|Bars": 2880,
-        "5|Dining": 2880,
-        "5|Cafes": 2880,
-        "5|Wellness": 2880,
-        "5|Essentials": 2880,
-        "5|Culture": 2880,
-        "5|Shopping": 2880,
-        "5|Transport": 2880,
-        "10|All": 1280,
-        "10|Dining": 2880,
-        "10|Cafes": 2880,
-        "10|Bars": 2880,
-        "10|Wellness": 2880,
-        "10|Essentials": 2880,
-        "10|Shopping": 2880,
-        "10|Transport": 2880,
-        "10|Culture": 2880,
-        "15|All": 1780,
-        "15|Dining": 2880,
-        "15|Cafes": 2880,
-        "15|Bars": 2880,
-        "15|Wellness": 2880,
-        "15|Essentials": 2880,
-        "15|Shopping": 2880,
-        "15|Transport": 2880,
-        "15|Culture": 2880
+        "5|All": 5200,
+        "5|Bars": 8200,
+        "5|Dining": 6200,
+        "5|Cafes": 8200,
+        "5|Wellness": 8200,
+        "5|Essentials": 8200,
+        "5|Culture": 8200,
+        "5|Shopping": 8200,
+        "5|Transport": 8200,
+        "10|All": 5200,
+        "10|Dining": 6200,
+        "10|Cafes": 8200,
+        "10|Bars": 8200,
+        "10|Wellness": 8200,
+        "10|Essentials": 8200,
+        "10|Shopping": 8200,
+        "10|Transport": 8200,
+        "10|Culture": 8200,
+        "15|All": 5200,
+        "15|Dining": 8200,
+        "15|Cafes": 8200,
+        "15|Bars": 8200,
+        "15|Wellness": 8200,
+        "15|Essentials": 8200,
+        "15|Shopping": 8200,
+        "15|Transport": 8200,
+        "15|Culture": 8200
       };
       const specificKey = `${snapshot.distance}|${snapshot.category}`;
 
       if ((snapshot.search || "").trim()) {
-        if (count <= 2) return 1080;
-        if (count <= 4) return 920;
-        if (count <= 6) return 760;
-        return 520;
+        if (count === 0) return 9600;
+        if (count === 1) return 9000;
+        if (count <= 2) return 8400;
+        if (count <= 4) return 7200;
+        if (count <= 6) return 6000;
+        return 4600;
       }
 
       if (specificSpacerHeights[specificKey] !== undefined) {
@@ -3754,4 +3758,3 @@
   </script>
 </body>
 </html>
-<!-- trigger deploy -->
