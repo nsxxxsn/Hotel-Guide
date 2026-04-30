@@ -2178,7 +2178,8 @@
       #directory,
       #itineraries,
       #flipbook,
-      #contact {
+      #contact,
+      .page-stabilizer {
         display: none !important;
       }
 
@@ -2187,6 +2188,18 @@
         box-shadow: none !important;
         border-radius: 0 !important;
         padding: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+      }
+
+      main,
+      .shell,
+      .directory-groups,
+      .pdf-guide,
+      .pdf-shell,
+      .pdf-bands {
+        min-height: 0 !important;
+        height: auto !important;
       }
 
       .shell {
@@ -2221,6 +2234,13 @@
         break-inside: auto;
         page-break-inside: auto;
         gap: 10px;
+      }
+
+      .page-stabilizer {
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
       }
     }
 
@@ -3656,19 +3676,38 @@
       });
     }
 
+    const printStateCache = {
+      resultsMinHeight: "",
+      stabilizerHeight: ""
+    };
+
+    function prepareForPrint() {
+      printStateCache.resultsMinHeight = directoryGroups.style.minHeight;
+      printStateCache.stabilizerHeight = pageStabilizer.style.height;
+      directoryGroups.style.minHeight = "";
+      setPageStabilizerHeight(0);
+    }
+
+    function restoreAfterPrint() {
+      directoryGroups.style.minHeight = printStateCache.resultsMinHeight || "";
+      pageStabilizer.style.height = printStateCache.stabilizerHeight || "";
+    }
+
     function jumpToVenue(name) {
       const el = document.getElementById(venueId(name));
       if (!el) {
-        setState({ search: name, distance: "All", category: "All", curation: null });
-        searchInput.value = name;
-        setTimeout(() => {
+        searchInput.value = "";
+        setStatePreservingFilters({ search: "", distance: "All", category: "All", curation: null });
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
           const fallback = document.getElementById(venueId(name));
           if (fallback) {
             fallback.scrollIntoView({ behavior: "smooth", block: "center" });
             fallback.classList.add("flash");
             setTimeout(() => fallback.classList.remove("flash"), 1300);
           }
-        }, 40);
+          });
+        });
         return;
       }
 
@@ -3765,6 +3804,9 @@
     renderItineraries();
     renderPdfGuide();
     setupReveal();
+
+    window.addEventListener("beforeprint", prepareForPrint);
+    window.addEventListener("afterprint", restoreAfterPrint);
   </script>
 </body>
 </html>
