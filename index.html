@@ -1519,7 +1519,7 @@
 
     .pdf-bands {
       display: grid;
-      gap: 18px;
+      gap: 10px;
     }
 
     .pdf-band {
@@ -1631,12 +1631,16 @@
       align-items: stretch;
     }
 
+    .contact-grid article {
+      min-height: 232px;
+    }
+
     .contact-links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 14px;
       margin-top: auto;
+      padding-top: 16px;
     }
 
     .contact-links a {
@@ -2195,7 +2199,6 @@
         padding: 0 !important;
       }
 
-      .pdf-band,
       .pdf-venue,
       .pdf-meta article {
         break-inside: avoid;
@@ -2203,7 +2206,20 @@
         box-shadow: none !important;
       }
 
+      .pdf-band {
+        break-inside: auto !important;
+        page-break-inside: auto !important;
+      }
+
+      .pdf-band-head {
+        break-after: avoid-page;
+        page-break-after: avoid;
+      }
+
       .pdf-band-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        break-inside: auto;
+        page-break-inside: auto;
         gap: 10px;
       }
     }
@@ -2435,7 +2451,7 @@
             <div class="closing-grid contact-grid">
               <article>
                 <strong>Hotel</strong>
-                <p>InterContinental Singapore Robertson Quay<br />1 Nanson Road<br />Singapore 238909</p>
+                <p>InterContinental Singapore Robertson Quay<br />1 Nanson Road, Singapore 238909</p>
                 <div class="contact-links">
                   <a href="https://www.google.com/maps/search/?api=1&query=InterContinental%20Singapore%20Robertson%20Quay%2C%201%20Nanson%20Road%2C%20Singapore%20238909" target="_blank" rel="noopener noreferrer">Open Map</a>
                 </div>
@@ -3148,32 +3164,28 @@
       }
     ];
 
-    const printHighlightsByDistance = {
-      "5": [
-        "Long Beach Seafood",
-        "Tapas24",
-        "Toby's Estate Coffee Roasters",
-        "Natureland Robertson Quay",
-        "STPI Creative Workshop & Gallery",
-        "Singapore River Promenade"
-      ],
-      "10": [
-        "Rosso Vino",
-        "Entrepot",
-        "Meta Restaurant",
-        "Bistecca Tuscan Steakhouse",
-        "New Bahru",
-        "Singapore Repertory Theatre"
-      ],
-      "15": [
-        "CQ @ Clarke Quay",
-        "Clarke Quay MRT",
-        "Great World",
-        "Zouk / Phuture",
-        "Boat Quay",
-        "Chinatown"
-      ]
-    };
+    const printBandDefinitions = [
+      {
+        key: "in-hotel",
+        title: "In-Hotel",
+        description: "On-property dining, lounge access and immediate recovery options."
+      },
+      {
+        key: "5",
+        title: "5-Min Walk",
+        description: "The closest band outside the hotel for quick dining, coffee, essentials and an easy stroll."
+      },
+      {
+        key: "10",
+        title: "10-Min Walk",
+        description: "A slightly wider walk for stronger dining, lifestyle stops and practical transport links."
+      },
+      {
+        key: "15",
+        title: "15-Min Walk",
+        description: "The longer walk band for nightlife, culture, shopping and wider exploration."
+      }
+    ];
 
     const state = {
       search: "",
@@ -3545,7 +3557,7 @@
     }
 
     function renderPdfGuide() {
-      const intro = `A short print version of the neighbourhood guide, focused on the most useful spots within a 5, 10, or 15-minute walk from the hotel.`;
+      const intro = `A printable neighbourhood guide with every venue from the live page, grouped by walking distance from the hotel.`;
       const hotelEmblem = window.__hotelEmblem || "assets/hotel-emblem.png";
 
       pdfGuide.innerHTML = `
@@ -3565,37 +3577,35 @@
 
           <div class="pdf-meta">
             <article>
-              <span>Included</span>
-              <strong>5, 10 and 15-minute walk bands only</strong>
-            </article>
-            <article>
-              <span>Best for</span>
-              <strong>Quick guest overview and client sharing</strong>
-            </article>
-            <article>
               <span>Hotel</span>
-              <strong>1 Nanson Road, Singapore 238909</strong>
+              <strong>InterContinental Singapore Robertson Quay<br />1 Nanson Road, Singapore 238909</strong>
+            </article>
+            <article>
+              <span>Front Desk</span>
+              <strong>+65 6826 5000</strong>
+            </article>
+            <article>
+              <span>Email</span>
+              <strong>info.sinic@ihg.com</strong>
             </article>
           </div>
 
           <div class="pdf-bands">
-            ${["5", "10", "15"].map((distance) => {
-              const items = printHighlightsByDistance[distance]
-                .map((name) => venues.find((venue) => venue.name === name))
-                .filter(Boolean);
+            ${printBandDefinitions.map((band) => {
+              const items = venues.filter((venue) => venue.distance === band.key);
 
               return `
                 <section class="pdf-band">
                   <div class="pdf-band-head">
-                    <strong>${distanceLabels[distance]}</strong>
-                    <span>${distanceDescriptions[distance]}</span>
+                    <strong>${band.title}</strong>
+                    <span>${band.description}</span>
                   </div>
                   <div class="pdf-band-grid">
                     ${items.map((venue) => `
                       <article class="pdf-venue">
                         <div class="pdf-venue-top">
                           <h3>${venue.name}</h3>
-                          <span class="pdf-type">${venue.category}</span>
+                          <span class="pdf-type">${categoryBadgeLabel(venue.category)}</span>
                         </div>
                         <p class="pdf-address">${venue.address}</p>
                         <p class="pdf-note">${venue.note}</p>
